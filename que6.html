@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Rectangle Object</h1>
+</body>
+<script>
+    var rectangle = {
+    length: 0,
+    width: 0,
+     function(length, width) {
+        this.length = length;
+        this.width = width;
+    },
+     function() {
+        return this.length * this.width;
+    },
+     function() {
+        return 2 * (this.length + this.width);
+    }
+};
+
+rectangle.setDimensions(5, 8);
+console.log(rectangle.area());
+console.log(rectangle.perimeter());
+
+</script>
+</html>
